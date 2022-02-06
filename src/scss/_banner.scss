@@ -1,0 +1,110 @@
+.banner {
+    background-color: $blue-charcoal;
+    overflow: hidden;
+    padding-bottom: 17px;
+    @include breakpoint (touch) {
+        padding-bottom: 52px;
+    }
+}
+
+.banner-holder {
+    position: relative;
+    padding: 153px 0;
+    @include breakpoint (touch) {
+        padding: 52px 0;
+    }
+}
+
+.banner-inner {
+    z-index: 10;
+    position: relative;
+}
+
+
+.banner-cover {
+    @extend %has-cover;
+    height: 103%;
+    width: 80%;
+    position: absolute;
+    top: 0.3%;
+    right: -7%;
+    &::after {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        background-color: rgba($black, 0.6);
+        display: none;
+    }
+    @include breakpoint(touch) {
+        right: -37.2%;
+        height: 100%;
+        width: 100%;
+        top: 5.2%;
+       &::after {
+           display: block;
+       }
+    }
+    @include breakpoint(phone){
+        height: 70%;
+        width: 110%;
+    }
+}
+
+.banner-title {
+    font-size: 80px;
+    line-height: 96px;
+    font-weight: 400;
+    color: $white;
+    max-width: 567px;
+    @include breakpoint (touch) {
+        max-width: 247px;
+        font-size: 48px;
+        line-height: 60px;
+    }
+}
+
+.banner-text {
+    color: $white;
+    font-size: 16px;
+    line-height: 26px;
+    max-width: 458px;
+    font-family: $font-mada;
+    font-weight: 400;
+    padding: 23px 0 39px;
+    right: 2px;
+}
+
+.banner-button {
+    font-size: 18px;
+    position: relative;
+    line-height: 16px;
+    min-width: 288px;
+    min-height: 52px;
+    padding: 10px;
+    color: $tacao;
+    text-transform: uppercase;
+    background-color: $mondo;
+    border: none;
+    &::after {
+        content: '';
+        position: absolute;
+        top: -4px;
+        left: -4px;
+        right: -4px;
+        bottom: -4px;
+        border: 1px solid $tacao;
+    }
+    @include hover {
+        color: $mondo;
+        background-color: $tacao;
+    }
+    @include breakpoint (touch) {
+        width: 98%;
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+}

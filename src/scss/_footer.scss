@@ -1,0 +1,223 @@
+.footer {
+    background-color: $bunker;
+    padding: 32px 0;
+    text-align: center;
+}
+
+.footer-logo {
+    max-width: 130px;
+    max-height: 130px;
+    padding-bottom: 14px;
+}
+
+.footer-top {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-bottom: 1.5px solid rgba($color: $white, $alpha: 0.1);
+    padding: 30px 0;
+    @include breakpoint (touch) {
+        padding: 2px 0 16px;
+    }
+}
+
+.footer-links {
+    text-decoration: none;
+    font-size: 16px;
+    line-height: 16px;
+    font-weight: normal;
+    font-family: $font-mada;
+    color: $silver;
+}
+
+.footer-phone,
+.footer-address {
+    padding: 10px;
+    text-decoration: none;
+    font-size: 16px;
+    line-height: 16px;
+    font-weight: normal;
+    font-family: $font-mada;
+    color: $silver;
+    @include hover {
+        opacity: 0.7;
+    }
+    @include breakpoint (touch){
+        padding: 4px;
+    }
+}
+
+.footer-address {
+    padding: 0 0 10px;
+    @include breakpoint (touch) {
+        padding: 5px 0 10px;
+    }
+}
+
+.footer-bot {
+    padding: 27px 0;
+    @include breakpoint(touch) {
+        padding: 18px 0;
+        margin: 0 -8px;
+    }
+}
+
+.footer-list {
+    display: flex;
+    flex-direction: row; 
+    justify-content: center;
+    padding-bottom: 42px;
+    @include breakpoint (touch) {
+        display: none;
+    }   
+}
+
+.footer-item {
+    margin: 0 16px;
+    @include hover {
+        opacity: 0.7;
+    }
+}
+
+.footer-input {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    @include breakpoint(touch) {
+        flex-direction: column;
+    }
+}
+
+.footer-name,
+.footer-mail {
+    background-color: $river-bed;
+    flex: 1 1 24%;
+    max-width: 24%;
+    min-height: 50px;
+    padding: 10px;
+    border: none;
+    font-size: 16px;
+    line-height: 16px;
+    font-family: 400;
+    color: $silver;
+    outline: none;
+    &:focus {
+        background-color: $background-grey;
+        color: $white;
+    }
+    @include breakpoint (touch) {
+        margin: 10px;
+        flex: 1 1 100%;
+        max-width: 100%;
+    }
+}
+
+.footer-message {
+    background-color: $river-bed;
+    flex: 1 1 36%;
+    max-width: 36%;
+    min-height: 50px;
+    padding: 10px;
+    border: none;
+    font-size: 16px;
+    line-height: 16px;
+    font-family: 400;
+    color: $silver;
+    outline: none;
+    &:focus {
+        background-color: $background-grey;
+    }
+    @include breakpoint (touch) {
+        margin: 10px;
+        flex: 1 1 100%;
+        max-width: 100%;
+    }
+}
+
+
+.footer-button {
+    flex: 1 1 12%;
+    max-width: 12%;
+    min-height: 50px;
+    background-color: $bunker;
+    text-transform: uppercase;
+    color: $tacao;
+    border: 1px solid $tacao;
+    font-size: 18px;
+    line-height: 16px;
+    @include hover {
+        color: $bunker;
+        background-color: $tacao;
+    }
+    @include breakpoint (touch) {
+        margin: 10px;
+        flex: 1 1 100%;
+        max-width: 100%;
+    }
+}
+
+.footer-rights {
+    font-size: 0;
+    vertical-align: middle;
+    padding: 50px 0 0;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    @include breakpoint (touch) {
+        padding: 30px 0 0;
+    }
+}
+
+.rigths-link {
+    text-decoration: none;
+    color: $silver;
+    font-size: 14px;
+    line-height: 16px;
+    font-weight: 400;
+    padding: 10px;
+    @include hover {
+        opacity: 0.6;
+    }
+}
+
+.rigths {
+    color: $silver;
+    font-size: 14px;
+    line-height: 16px;
+    font-weight: 400;
+    padding: 10px;
+    @include breakpoint (touch) {
+        width: 100%;
+        order: 3;
+        padding: 0;
+    }
+}
+
+.middle-link {
+    position: relative;
+    &::before,
+    &::after {
+        content: '';
+        width: 0;
+        height: 15px;
+        position: absolute;
+        border-left: 1.6px solid $silver;
+    }
+    &::after {
+        right: -5px;
+        top: 10px;
+    }
+    &::before {
+        left: -5px;
+        top: 10px;
+    }
+    @include breakpoint (touch) {
+        &::before {
+            display: none;
+        }
+        &::after {
+            right: 1px;
+            top: 10px;
+        }
+    }
+}

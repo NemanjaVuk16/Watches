@@ -1,0 +1,158 @@
+.about-container {
+    background-color: $cream;
+    padding: 110px 0;
+    position: relative;
+    &::after {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        background-color: rgba($black, 0.6);
+        display: none;
+    }
+    @include breakpoint (touch) {
+        padding: 30px 0;
+        &::after {
+            display: block;
+        }
+    }
+}
+
+.row {
+    z-index: 10;
+    position: relative;
+    @include breakpoint (touch) {
+        padding-bottom: 15px;
+    }
+}
+
+.image-full {
+    display: none;
+    @include breakpoint (touch) {
+        display: block;
+        width: 100%;
+    }
+}
+
+.image-left {
+    width: 60%;
+    @include breakpoint (touch) {
+        display: none;
+    }
+}
+
+.image-right {
+    position: absolute;
+    top: 106px;
+    left: 262px;
+    width: 27.5%;
+    @include breakpoint (touch) {
+        display: none;
+    }
+}
+
+.image-right-full {
+    display: none;
+    @include breakpoint (touch) {
+        display: block;
+        width: 100%;
+        position: relative;
+        top: 0;
+        left: 0;
+    }
+}
+
+.about-about {
+    padding-left: 75px;
+    @include breakpoint (touch) {
+        padding: 0;
+    }
+}
+
+.about-holder {
+    padding-left: 27px;
+    @include breakpoint (touch) {
+        padding: 40px 0 42px;
+    }
+}
+
+.about-title {
+    font-weight: 700;
+    font-size: 50px;
+    line-height: 60px;
+    padding-bottom: 38px;
+    position: relative;
+    &::before {
+        content: '';
+        width: 98px;
+        position: absolute;
+        border-bottom: 1px solid black;
+        top: 27px;
+        right: calc(100% + 20px);
+    }
+    @include breakpoint (touch) {
+        padding-left: 21%;
+        font-size: 36px;
+        padding-bottom: 8px;
+    &::before {
+        left: 0px;
+        width: 15%;
+    }
+    }
+}
+
+.about-text {
+    color: $bunker;
+    font-size: 17px;
+    line-height: 26px;
+    padding-bottom: 15px;
+    @include breakpoint (touch) {
+        font-size: 16px;
+        padding-bottom: 22px;
+    }
+}
+
+.about-text-last{
+    padding-bottom: 29px;
+    @include breakpoint (touch) {
+        display: none;
+    }
+}
+
+.about-text-midle {
+    @include breakpoint (touch) {
+        padding-bottom: 40px;
+    }
+}
+
+.col-6-about {
+    @include breakpoint (touch) {
+        flex: 1 1 100%;
+        max-width: 100%;
+    }
+}
+
+.about-link{
+    text-transform: uppercase;
+    text-decoration: none;
+    color: $black;
+    font-family: $font-mada;
+    font-size: 18px;
+    line-height: 16px;
+    position: relative;
+    padding: 5px;
+    &::after {
+        content: '';
+        top: -2px;
+        right: -6px;
+        padding: 16px;
+        border: 1px solid $tacao;
+        position: absolute;
+    }
+    @include hover {
+        opacity: 0.7;
+    }
+
+}

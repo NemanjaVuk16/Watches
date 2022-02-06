@@ -1,0 +1,31 @@
+h1, .h1 {
+    font-size: 80px;
+    line-height: 96px;
+    display: block;
+}
+
+h2, .h2 {
+    font-size: 50px;
+    line-height: 60px;
+    display: block;
+    font-family: $font-default;
+}
+
+p {
+    font-size: 16px;
+    line-height: 20px;
+    font-family: $font-mada;
+    font-weight: 400;
+}
+
+button {
+    cursor: pointer;
+}
+
+.icon-arrow {
+    color: #EFB884;
+    font-size: 16px;
+    position: absolute;
+    top: 6px;
+    left: calc(100% + 6px);
+}

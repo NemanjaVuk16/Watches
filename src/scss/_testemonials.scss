@@ -1,0 +1,243 @@
+
+.testemonials {
+    @extend %has-cover;
+    position: relative;
+    padding: 70px 0 92px;
+    &::after {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        background-color: rgba(0, 0, 0, 0.6);
+        display: none;
+    }
+    @include breakpoint (touch) {
+        &::after {
+            display: block;
+        }   
+    }
+
+}
+
+.testemonials-holder {
+    padding: 30px;
+    position: relative;
+    z-index: 10;
+
+}
+
+
+.testemonial-title-holder {
+    display: flex;
+    justify-content: center;
+    padding-bottom: 3%;
+    @include breakpoint (touch) {
+        padding-bottom: 0;
+    }
+}
+
+
+.testemonials-title {
+    position: relative;
+    font-weight: 600;
+    padding-left: 130px;
+    margin-left: -140px;
+    &::before {
+        content: '';
+        width: 100px;
+        position: absolute;
+        border-bottom: 1px solid $bunker;
+        top: 27px;
+        right: 74%;
+    }
+    @include breakpoint (touch) {
+        font-size: 36px;
+        line-height: 60px;
+        font-weight: 400;
+        padding-left: 115px;
+        font-weight: 900;
+        &::before {
+            width: 50px;
+            right: 65%;
+        }
+    }
+}
+
+.testemonial-card-section {
+    @include  breakpoint (touch){
+        transform: translateX(-6%);
+    }
+}
+
+.testemonial-card {
+    font-size: 0;
+    max-width: 840px;
+    margin: 0 auto;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    padding: 31px 0;
+    @include breakpoint (touch) {
+        transform: translateX(6%);
+        flex-direction: column;
+    }
+}
+
+.testemonial-arrow-left {
+    color: #EFB884;
+    font-size: 16px;
+    position: absolute;
+    top: 20px;
+    left: calc(100% + -10px);
+}
+
+.testemonial-quote {
+    flex: 1 1 64%;
+    max-width: 64%;
+    text-align: right;
+    position: relative;
+    padding-bottom: 64px;
+    @include breakpoint (touch) {
+        flex: 1 1 100%;
+        max-width: 100%;
+        order: 2;
+        text-align: center;
+        padding-top: 20px;
+    }
+}
+
+.testemonial-text {
+    font-size: 16px;
+    line-height: 26px;
+    color: $bunker;
+    max-width: 505px;
+    padding: 100px 0 17px 34px;
+    position: relative;
+    @include breakpoint (touch) {
+        max-width: 340px;
+        padding-top: 20px;
+        margin: 0 20px;
+    }
+}
+
+.testemonial-link {
+    font-size: 16px;
+    line-height: 26px;
+    color: $black;
+    text-decoration: none;
+    position: relative;
+    padding-right: 7px;
+    margin-right: 9%;
+    &::after {
+        content:' ';
+        width: 14px;
+        height: 14px;
+        background-color: $black;
+        position: absolute;
+        top: 9%;
+        left: 102%;
+    }
+    @include hover {
+        opacity: 0.7;
+    }
+    @include breakpoint (touch) {
+        text-align: center;
+        margin-right: 2%;
+    }
+}
+
+.testemonial-picture-holder {
+    flex: 1 1 36%;
+    max-width: 36%;
+    @include breakpoint (touch) {
+        flex: 1 1 60%;
+        max-width: 60%;
+        order: 1;
+    }
+}
+
+.slick-slider img.testemonial-picture {
+    flex: 1 1 100%;
+    max-width: 100%;
+    max-height: 282px;
+    max-width: 282px;
+    @include breakpoint (touch) {
+        display: none;
+    }
+}
+
+.slick-slider img.testemonial-picture-small {
+    flex: 1 1 100%;
+    max-width: 100%;
+    display: none;
+    @include breakpoint (touch) {
+        display: block;
+    }
+}
+
+
+.icon-quote {
+    font-size: 75px;
+    line-height: 80px;
+    color: $black;
+    position: absolute;
+    left: 15px;
+    bottom: 189px;
+    @include breakpoint (touch){
+        font-size: 53px;
+        left: 13px;
+        bottom: 90%;
+    }
+}
+
+.icon-arrowleft {
+    font-size: 16px;
+    line-height: 20px;
+    color: $tacao;
+    position: absolute;
+    z-index: 10;
+    top: 160px;
+    left: 10%;
+    padding:5px;
+    background-color: transparent;
+    border: none;
+    @include breakpoint (touch) {
+        top: 95px;
+        left: 10%;
+    }
+}
+
+.icon-arrowright {
+    font-size: 16px;
+    line-height: 20px;
+    color: $tacao;
+    position: absolute;
+    top: 160px;
+    left: 88%;
+    padding:5px;
+    background-color: transparent;
+    border: none;
+    @include breakpoint (touch) {
+        top: 95px;
+        left: 88%;
+    }
+}
+
+.icon-arrow3 {
+    font-size: 16px;
+    color: $tacao;
+    position: absolute;
+    top: 160px;
+    left: 88%;
+    padding:5px;
+    background-color: transparent;
+    border: none;
+    @include breakpoint (touch) {
+        top: 95px;
+        left: 88%;
+    }
+}
+
+

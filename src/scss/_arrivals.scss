@@ -1,0 +1,243 @@
+.arrivals{
+    @extend %has-cover;
+    position: relative;
+    &::before {
+        content: '';
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        background-color: rgba($bunker, 0.98);
+    }
+}
+
+.row-arrivals {
+    padding-top: 3%;
+}
+
+.arrivals-holder {
+    position: relative;
+    z-index: 10;
+    padding: 80px 0 117px;
+}
+
+.big-card-img {
+    width: 100%;
+    max-height: 550px;
+}
+
+.arrivals-text {
+    padding: 20px 4px 10px;
+    vertical-align: middle;
+    display: flex;
+    justify-content: space-between;
+}
+
+.arrivals-title {
+    position: relative;
+    font-size: 50px;
+    line-height: 60px;
+    color: $white;
+    font-weight: 700;
+    padding-left: 170px;
+    transform: translateX(calc(-9vw + 100px));
+    margin-left: -100px;
+    &::before {
+        content: '';
+        width: 100px;
+        position: absolute;
+        border-bottom: 1px solid white;
+        top: 27px;
+        left: 50px;
+    }
+    @include breakpoint (touch) {
+        margin-left: 70px;
+        font-size: 36px;
+        transform: none;
+        padding-left: 0;
+        &::before {
+            width: 50px;
+            left: -75px;
+        }
+    }
+}
+
+.arrivals-link {
+    position: relative;
+    padding: 22px;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: $white;
+    font-family: $font-mada;
+    font-size: 18px;
+    line-height: 16px;
+    position: relative;
+    &::after {
+        content: '';
+        top: 10px;
+        right: 10px;
+        padding: 16px;
+        border: 1px solid $tacao;
+        position: absolute;
+    }
+    @include hover {
+        opacity: 0.7;
+    }
+}
+
+.arrivals-arrow {
+    color: #EFB884;
+    font-size: 16px;
+    position: absolute;
+    top: 20px;
+    left: calc(100% + -10px);
+}
+
+.card {
+    background-color: $old-lace;
+}
+
+.big-card-img {
+    @extend %has-cover;
+    position: relative;
+    width: 100%;
+    padding: 293px 0;
+    max-height: 292.5px;
+}
+
+.price {
+    background-color: $bunker;
+    position: absolute;
+    bottom: 3px;
+    right: 0;
+    color: $white;
+    padding: 10px 24px;
+    font-size: 33px;
+    line-height: 68px;
+    font-weight: 700;
+}
+
+.card-holder {
+    text-align: center;
+    padding-bottom: 14px;
+    @include breakpoint (touch) {
+        margin-bottom: 20px;
+    }
+}
+
+.card-title {
+    font-size: 36px;
+    line-height: 87px;
+    padding: 10px;
+}
+
+.card-text {
+    font-size: 20px;
+    line-height: 37px;
+    color: $bunker;
+    padding: 9px 40px;
+}
+
+.card-link {
+    font-size: 20px;
+    line-height: 20px;
+    color: $bunker;
+    font-weight: 400;
+    text-decoration: none;
+    position: relative;
+    display: block;
+    padding: 10px 0 28px;
+    &::after {
+        content: '';
+        position: absolute;
+        height: 2px;
+        background-color: $tacao;
+        transition: width 0.4s ease;
+        bottom: -2px;
+        left: 1%;
+        width: 0;
+    }
+    @include hover {
+        color: $black;
+        &::after {
+            width: 42%;
+        }
+    }
+    @include breakpoint (touch) {
+    }
+}
+
+.card-link-big{
+    &::after {
+        content: '';
+        position: absolute;
+        height: 2px;
+        background-color: $tacao;
+        transition: width 0.4s ease;
+        bottom: 25px;
+        left: 41%;
+        width:0;
+    }
+    @include hover {
+        color: $black;
+        &::after {
+            width: 19%;
+        }
+    }
+
+}
+
+.small-card-price {
+    background-color: $bunker;
+    position: absolute;
+    bottom: 0px;
+    right: 0;
+    color: $white;
+    padding: 12px 19px;
+    font-size: 23px;
+    line-height: 40px;
+    font-weight: 700;
+}
+
+.small-card-title {
+    font-size: 24px;
+    line-height: 26px;
+    color: $bunker;
+    font-weight: 600;
+}
+
+.small-card-text {
+    max-width: 230px;
+    padding: 12% 0;
+    line-height: 24px;
+}
+
+.small-card-link {
+    padding: 0;
+}
+
+
+.small-card-second {
+    margin: 26px 0;
+}
+
+.small-card {
+    background-color: $old-lace;
+    position: relative;
+    width: 100%;
+}
+
+.small-card-img{
+    @extend %has-cover;
+    position: absolute;
+    height: 100%;
+    width: 48%;
+    left: 0;
+    top: 0;
+}
+.small-card-holder {
+    width: auto;
+    margin-left: 46%;
+    padding: 42px;
+}
