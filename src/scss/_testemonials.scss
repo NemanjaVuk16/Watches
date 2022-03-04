@@ -163,7 +163,6 @@
     max-width: 100%;
     max-height: 282px;
     max-width: 282px;
-    box-shadow: 14px 16px 11px $background-grey;
     @include breakpoint (touch) {
         display: none;
     }
@@ -176,6 +175,10 @@
     @include breakpoint (touch) {
         display: block;
     }
+}
+
+.testemonial-picture {
+    box-shadow: 14px 16px 8px $silver;
 }
 
 
