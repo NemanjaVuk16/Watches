@@ -1,8 +1,8 @@
 {
-	"name": "vega-it-internship-starter",
+	"name": "starter",
 	"version": "1.0.0",
-	"description": "Vega IT - internship starter",
-	"author": "Vega IT",
+	"description": "starter",
+	"author": "nemanja",
 	"license": "ISC",
 	"devDependencies": {
 		"autoprefixer": "^10.1.0",
